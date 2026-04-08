@@ -1,0 +1,21 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.devnet]
+duel = "FUQ2JFRFU1s23U4FdZPotAaFrJ1nNH3R9bhWrxUnVBMb"
+
+[programs.mainnet]
+duel = "FUQ2JFRFU1s23U4FdZPotAaFrJ1nNH3R9bhWrxUnVBMb" # do not use until contract hardening is complete
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
